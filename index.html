@@ -2,169 +2,175 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Hernandes Mobile Auto Demo</title>
 <meta name="description" content="Mobile auto repair across San Diego. Diagnostics, brakes, electrical and engine work at your home, office or roadside. BBB A+ since 2019.">
-<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@700;800;900&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0f1114; --ink2:#1a1e24; --line:#e3e6ea; --bg:#f6f7f9; --panel:#fff;
-  --mut:#5b636e; --hi:#c9f24a; --hi2:#a8d02c; --sig:#e8503a;
-  --shadow:0 1px 2px rgba(15,17,20,.06), 0 12px 32px rgba(15,17,20,.07);
+  --coral:#e57c64; --coral-d:#c9614a; --coral-l:#f4a893; --coral-w:#fdf3f0;
+  --ink:#14100e; --ink2:#241c18; --body:#5c524d; --line:#eae3df; --bg:#fbf8f6; --panel:#fff;
+  --shadow:0 1px 2px rgba(30,18,12,.05), 0 14px 38px rgba(30,18,12,.08);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
-h1,h2,h3,.dsp{font-family:Chivo,Impact,"Arial Black",sans-serif;font-weight:900;line-height:1.02;letter-spacing:-.035em;text-wrap:balance}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+body{font-family:Manrope,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Archivo,Helvetica,Arial,sans-serif;font-weight:800;line-height:1.08;letter-spacing:-.028em;text-wrap:balance}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
 a{color:inherit}
-a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--hi);outline-offset:2px}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
 
-.demobar{background:#0f1114;color:#cfd5dd;font-size:12.5px;text-align:center;padding:9px 14px;letter-spacing:.01em}
-.demobar b{color:var(--hi)}
-.urg{background:var(--sig);color:#fff;text-align:center;font-size:13.5px;padding:10px;font-weight:600;letter-spacing:.01em}
+.demobar{background:var(--ink);color:#cbbfb8;font-size:12.5px;text-align:center;padding:9px 14px}
+.demobar b{color:var(--coral-l)}
+.urg{background:var(--coral);color:#fff;text-align:center;font-size:13.5px;padding:11px;font-weight:600}
 .urg a{color:#fff;text-decoration:underline;text-underline-offset:3px}
 
-nav{position:sticky;top:0;z-index:60;background:rgba(246,247,249,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.navin{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
-.logo{font-family:Chivo,sans-serif;font-weight:900;font-size:19px;letter-spacing:-.04em;text-transform:uppercase}
-.logo i{font-style:normal;color:var(--mut);font-weight:700}
-.navl{display:flex;gap:26px;font-size:14px;font-weight:600;letter-spacing:.01em}
-.navl a{color:var(--mut);text-decoration:none}
-.navl a:hover{color:var(--ink)}
-.call{display:inline-flex;align-items:center;gap:9px;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;font-size:14.5px;padding:12px 20px;border-radius:6px;white-space:nowrap;letter-spacing:-.01em}
-.call:hover{background:var(--ink2)}
-@media(max-width:940px){.navl{display:none}}
+nav{position:sticky;top:0;z-index:60;background:rgba(251,248,246,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navin{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:15px 0}
+.logo{font-family:Archivo,sans-serif;font-weight:800;font-size:19px;letter-spacing:-.035em}
+.logo i{font-style:normal;color:var(--coral)}
+.navl{display:flex;gap:27px;font-size:14.5px;font-weight:600}
+.navl a{color:var(--body);text-decoration:none}
+.navl a:hover{color:var(--coral)}
+.call{display:inline-flex;align-items:center;gap:9px;background:var(--coral);color:#fff;text-decoration:none;font-weight:700;font-size:14.5px;padding:12px 21px;border-radius:8px;white-space:nowrap;box-shadow:0 4px 14px rgba(229,124,100,.32)}
+.call:hover{background:var(--coral-d)}
+@media(max-width:960px){.navl{display:none}}
 
-/* ---------- hero ---------- */
-.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;
-  background:repeating-linear-gradient(115deg,transparent 0 60px,rgba(201,242,74,.055) 60px 62px);}
-.heroin{position:relative;z-index:2;display:grid;grid-template-columns:1.12fr .88fr;gap:52px;align-items:center;padding:70px 0 78px}
-@media(max-width:1000px){.heroin{grid-template-columns:1fr;gap:34px;padding:46px 0 52px}}
-.kick{display:inline-flex;align-items:center;gap:9px;font-size:11.5px;letter-spacing:.17em;text-transform:uppercase;font-weight:700;color:var(--hi);margin-bottom:20px}
-.kick::before{content:"";width:26px;height:2px;background:var(--hi)}
-.hero h1{font-size:clamp(40px,6.6vw,74px);margin-bottom:20px}
-.hero h1 em{font-style:normal;color:var(--hi);display:block}
-.hero .lede{font-size:17.5px;color:#a9b2bd;max-width:490px;line-height:1.62}
-.ticks{list-style:none;margin-top:26px;display:grid;gap:11px}
-.ticks li{display:flex;gap:12px;font-size:15.5px;color:#dfe4ea;font-weight:500}
-.ticks svg{flex:0 0 19px;margin-top:4px;fill:var(--hi)}
+/* ---- photo plates: layered gradients standing in for photography ---- */
+.plate{position:relative;overflow:hidden;background:#241c18}
+.plate::before{content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(120% 90% at 18% 8%, rgba(229,124,100,.34), transparent 58%),
+    radial-gradient(90% 80% at 88% 92%, rgba(120,160,190,.24), transparent 60%),
+    linear-gradient(155deg,#2c221d 0%,#191310 55%,#241c18 100%);}
+.plate::after{content:"";position:absolute;inset:0;opacity:.30;
+  background:
+    repeating-linear-gradient(104deg, transparent 0 34px, rgba(255,255,255,.055) 34px 35px),
+    repeating-linear-gradient(14deg, transparent 0 86px, rgba(0,0,0,.30) 86px 88px);}
+.plate>*{position:relative;z-index:2}
 
-/* ---------- form ---------- */
-.form{background:var(--panel);border-radius:12px;padding:28px;box-shadow:0 30px 70px rgba(0,0,0,.42);color:var(--ink)}
-.form h3{font-size:23px;margin-bottom:5px;letter-spacing:-.03em}
-.form .fs{font-size:13.5px;color:var(--mut);margin-bottom:18px}
-label{display:block;font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--mut);margin:15px 0 6px}
-select,input{width:100%;font-family:inherit;font-size:15px;font-weight:500;color:var(--ink);background:#fafbfc;border:1.5px solid var(--line);border-radius:6px;padding:12px 13px}
-select:focus,input:focus{border-color:var(--ink);background:#fff}
-.btn{width:100%;margin-top:22px;background:var(--hi);color:var(--ink);border:0;border-radius:6px;padding:16px;font-family:Chivo,sans-serif;font-size:16px;font-weight:900;letter-spacing:-.02em;text-transform:uppercase;cursor:pointer}
-.btn:hover{background:var(--hi2)}
-.hint{font-size:11.5px;color:var(--mut);margin-top:12px;text-align:center}
-.out{display:none;margin-top:18px;border-radius:8px;padding:17px 18px;font-size:14.5px;border-left:4px solid}
+/* ---- hero ---- */
+.hero{color:#fff}
+.heroin{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center;padding:76px 0 84px}
+@media(max-width:1000px){.heroin{grid-template-columns:1fr;gap:36px;padding:48px 0 54px}}
+.kick{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--coral-l);margin-bottom:20px}
+.kick::before{content:"";width:28px;height:2px;background:var(--coral)}
+.hero h1{font-size:clamp(38px,6vw,66px);margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--coral-l)}
+.hero .lede{font-size:17.5px;color:#c9beb8;max-width:500px}
+.ticks{list-style:none;margin-top:26px;display:grid;gap:12px}
+.ticks li{display:flex;gap:12px;font-size:15.5px;color:#eae1dc;font-weight:500}
+.ticks svg{flex:0 0 20px;margin-top:4px;fill:var(--coral-l)}
+
+.form{background:var(--panel);border-radius:14px;padding:28px;box-shadow:0 34px 76px rgba(0,0,0,.44);color:var(--ink)}
+.form h3{font-size:23px;margin-bottom:5px}
+.form .fs{font-size:13.5px;color:var(--body);margin-bottom:18px}
+label{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--body);margin:15px 0 6px}
+select,input{width:100%;font-family:inherit;font-size:15px;font-weight:500;color:var(--ink);background:#fdfaf9;border:1.5px solid var(--line);border-radius:8px;padding:12px 13px}
+select:focus,input:focus{border-color:var(--coral);background:#fff}
+.btn{width:100%;margin-top:22px;background:var(--coral);color:#fff;border:0;border-radius:9px;padding:16px;font-family:Archivo,sans-serif;font-size:16px;font-weight:800;letter-spacing:-.015em;cursor:pointer;box-shadow:0 6px 18px rgba(229,124,100,.34)}
+.btn:hover{background:var(--coral-d)}
+.hint{font-size:11.5px;color:var(--body);margin-top:12px;text-align:center}
+.out{display:none;margin-top:18px;border-radius:10px;padding:17px 18px;font-size:14.5px;border-left:4px solid}
 .out.show{display:block}
-.out b{display:block;font-family:Chivo,sans-serif;font-size:17px;letter-spacing:-.02em;margin-bottom:6px}
-.o-urg{background:#fdf0ee;border-color:var(--sig);color:#a3301e}
-.o-hi{background:#f4fadf;border-color:var(--hi2);color:#43590a}
-.o-md{background:#f2f4f7;border-color:#8e98a4;color:#3d4550}
-.o-lo{background:#f6f7f9;border-color:#c3c9d1;color:#5b636e}
+.out b{display:block;font-family:Archivo,sans-serif;font-size:17px;margin-bottom:6px}
+.o-urg{background:#fdf0ec;border-color:var(--coral-d);color:#a04a35}
+.o-hi{background:#eff6f0;border-color:#4e8f63;color:#2c5b3c}
+.o-md{background:var(--coral-w);border-color:var(--coral);color:#8f4c38}
+.o-lo{background:#f5f2f0;border-color:#c4b8b2;color:#5c524d}
 
-/* ---------- strip ---------- */
-.strip{background:var(--hi);color:var(--ink)}
-.stripin{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 46px;padding:17px 0;font-size:13.5px;font-weight:700;letter-spacing:.01em}
+.strip{background:var(--ink)}
+.stripin{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 48px;padding:18px 0;font-size:13.5px;color:#c9beb8;font-weight:600}
 .stripin span{display:inline-flex;align-items:center;gap:9px}
-.stripin b{font-family:Chivo,sans-serif;font-weight:900}
+.stripin b{font-family:Archivo,sans-serif;font-weight:800;color:var(--coral-l)}
 
-section{padding:80px 0}
-.sh{max-width:640px;margin-bottom:44px}
+section{padding:82px 0}
+.sh{max-width:660px;margin-bottom:46px}
 .sh.mid{margin-left:auto;margin-right:auto;text-align:center}
-.sh .lab{font-size:11.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--mut);font-weight:700;margin-bottom:13px}
-.sh h2{font-size:clamp(30px,4.4vw,44px);margin-bottom:14px}
-.sh p{color:var(--mut);font-size:17px}
+.sh .lab{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--coral);font-weight:700;margin-bottom:13px}
+.sh h2{font-size:clamp(29px,4.2vw,42px);margin-bottom:14px}
+.sh p{color:var(--body);font-size:17px}
 
-/* ---------- photo slots ---------- */
-.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
-.shot{aspect-ratio:4/3;border-radius:10px;border:2px dashed #b8c0ca;background:
-  linear-gradient(135deg,#e9edf1 25%,transparent 25%) -14px 0/28px 28px,
-  linear-gradient(225deg,#e9edf1 25%,transparent 25%) -14px 0/28px 28px,
-  linear-gradient(315deg,#e9edf1 25%,transparent 25%) 0 0/28px 28px,
-  linear-gradient(45deg,#e9edf1 25%,transparent 25%) 0 0/28px 28px,#f2f5f8;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;gap:8px}
-.shot .n{font-family:Chivo,sans-serif;font-weight:900;font-size:15px;letter-spacing:-.02em;color:#717c88}
-.shot .d{font-size:12.5px;color:#8c96a2;line-height:1.45}
-.shot svg{width:30px;height:30px;fill:#aab3bd}
+/* ---- feature rows with photo plates ---- */
+.row{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-bottom:34px}
+.row:last-child{margin-bottom:0}
+.row.flip .art{order:2}
+@media(max-width:900px){.row{grid-template-columns:1fr;gap:26px}.row.flip .art{order:0}}
+.art{aspect-ratio:5/4;border-radius:16px;display:flex;align-items:flex-end;padding:26px}
+.art .cap{font-size:12px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.62);
+  border:1px solid rgba(255,255,255,.24);padding:7px 13px;border-radius:999px;backdrop-filter:blur(3px)}
+.rowtxt h3{font-size:29px;margin-bottom:13px}
+.rowtxt p{color:var(--body);font-size:16.5px;margin-bottom:14px}
+.rowtxt ul{list-style:none;display:grid;gap:10px;font-size:15.5px;color:var(--body)}
+.rowtxt li{display:flex;gap:11px}
+.rowtxt li::before{content:"";flex:0 0 7px;height:7px;border-radius:50%;background:var(--coral);margin-top:10px}
 
-/* ---------- services ---------- */
-.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:2px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.sv{background:var(--panel);padding:30px 26px}
-.sv .num{font-family:Chivo,sans-serif;font-weight:900;font-size:13px;color:var(--hi2);letter-spacing:.04em;margin-bottom:14px}
-.sv h3{font-size:21px;margin-bottom:9px;letter-spacing:-.03em}
-.sv p{font-size:14.5px;color:var(--mut)}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:20px}
+.sv{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px;box-shadow:var(--shadow)}
+.sv .ic{width:46px;height:46px;border-radius:11px;background:var(--coral-w);display:grid;place-items:center;margin-bottom:16px}
+.sv .ic svg{width:24px;height:24px;fill:var(--coral-d)}
+.sv h3{font-size:20px;margin-bottom:8px}
+.sv p{font-size:14.5px;color:var(--body)}
 
-/* ---------- two col ---------- */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));gap:32px}
+.step .n{font-family:Archivo,sans-serif;font-weight:800;font-size:15px;color:var(--coral);letter-spacing:.05em;margin-bottom:11px}
+.step h3{font-size:19px;margin-bottom:7px}
+.step p{font-size:14.5px;color:var(--body)}
+
 .two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 @media(max-width:880px){.two{grid-template-columns:1fr}}
-.box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:32px;box-shadow:var(--shadow)}
-.box.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
-.box .tag{display:inline-block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;background:var(--hi);color:var(--ink);padding:5px 11px;border-radius:4px;margin-bottom:15px}
-.box h3{font-size:24px;margin-bottom:14px;letter-spacing:-.03em}
-.box ul{list-style:none;display:grid;gap:11px;font-size:15px;color:var(--mut)}
-.box.dark ul{color:#b3bcc7}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:32px;box-shadow:var(--shadow)}
+.box.dark{color:#fff;border:0}
+.box .tag{display:inline-block;font-size:11px;letter-spacing:.11em;text-transform:uppercase;font-weight:800;background:var(--coral);color:#fff;padding:5px 12px;border-radius:5px;margin-bottom:15px}
+.box h3{font-size:23px;margin-bottom:14px}
+.box ul{list-style:none;display:grid;gap:11px;font-size:15px;color:var(--body)}
+.box.dark ul{color:#cabfb9}
 .box li{display:flex;gap:11px}
-.box li::before{content:"";flex:0 0 7px;height:7px;border-radius:50%;background:var(--hi2);margin-top:9px}
-.box.dark li::before{background:var(--hi)}
+.box li::before{content:"";flex:0 0 7px;height:7px;border-radius:50%;background:var(--coral);margin-top:9px}
 
-/* ---------- steps ---------- */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(224px,1fr));gap:30px}
-.step .n{font-family:Chivo,sans-serif;font-weight:900;font-size:44px;letter-spacing:-.05em;color:var(--line);line-height:1;margin-bottom:10px}
-.step h3{font-size:19px;margin-bottom:7px;letter-spacing:-.03em}
-.step p{font-size:14.5px;color:var(--mut)}
-
-/* ---------- proof ---------- */
-.proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
-.pf{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:26px;box-shadow:var(--shadow)}
-.pf .big{font-family:Chivo,sans-serif;font-weight:900;font-size:40px;letter-spacing:-.045em;line-height:1;margin-bottom:8px}
-.pf .cap{font-size:14px;color:var(--mut)}
+.proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.pf{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px;box-shadow:var(--shadow)}
+.pf .big{font-family:Archivo,sans-serif;font-weight:800;font-size:40px;letter-spacing:-.04em;line-height:1;margin-bottom:9px;color:var(--coral-d)}
+.pf .cap{font-size:14px;color:var(--body)}
 .pf.ghost{border-style:dashed;background:transparent;box-shadow:none}
-.pf.ghost .big{color:#b8c0ca}
+.pf.ghost .big{color:#c9bcb5}
 
 .areas{display:flex;flex-wrap:wrap;gap:10px}
-.areas span{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:9px 16px;font-size:14px;font-weight:600;color:var(--mut)}
+.areas span{background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:10px 17px;font-size:14.5px;font-weight:600;color:var(--body)}
 
-.cta{background:var(--ink);color:#fff;text-align:center;padding:82px 0}
-.cta h2{font-size:clamp(30px,4.6vw,48px);margin-bottom:16px}
-.cta h2 em{font-style:normal;color:var(--hi)}
-.cta p{color:#a9b2bd;font-size:17px;max-width:520px;margin:0 auto 30px}
-.cta .call{background:var(--hi);color:var(--ink);font-size:17px;padding:17px 32px}
-.cta .call:hover{background:var(--hi2)}
+.cta{color:#fff;text-align:center;padding:88px 0}
+.cta h2{font-size:clamp(29px,4.4vw,46px);margin-bottom:16px}
+.cta h2 em{font-style:normal;color:var(--coral-l)}
+.cta p{color:#c9beb8;font-size:17px;max-width:520px;margin:0 auto 30px}
+.cta .call{font-size:17px;padding:17px 33px}
 
-footer{background:#0a0c0e;color:#79828d;font-size:13.5px;padding:44px 0 34px}
+footer{background:#100c0a;color:#8a7c75;font-size:13.5px;padding:46px 0 34px}
 .fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:30px}
-footer h4{color:#fff;font-family:Chivo,sans-serif;font-size:12px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:13px}
-footer a{color:#79828d;text-decoration:none;display:block;margin-bottom:8px}
-footer a:hover{color:var(--hi)}
-.fn{border-top:1px solid #1c2025;padding-top:22px;margin-top:30px;font-size:12px;color:#5d666f;line-height:1.7}
-.fn b{color:#98a1ab}
+footer h4{color:#fff;font-family:Archivo,sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:13px}
+footer a{color:#8a7c75;text-decoration:none;display:block;margin-bottom:8px}
+footer a:hover{color:var(--coral-l)}
+.fn{border-top:1px solid #241c18;padding-top:22px;margin-top:30px;font-size:12px;color:#6d625c;line-height:1.72}
+.fn b{color:#a2948d}
 </style>
 
-<div class="demobar">CONCEPT DEMONSTRATION &mdash; built by <b>AG1 Consulting</b> for Israel Hernandes &middot; not a live site &middot; photo slots and figures are <b>placeholders</b></div>
+<div class="demobar">CONCEPT DEMONSTRATION &mdash; built by <b>AG1 Consulting</b> for Israel Hernandes &middot; not a live site &middot; imagery and figures are <b>placeholders</b></div>
 <div class="urg">Broken down right now? Call <a href="tel:6198719186"><b>(619) 871-9186</b></a> &mdash; 24/7 emergency mobile service across San Diego</div>
 
 <nav><div class="wrap navin">
-  <div class="logo">Hernandes <i>Mobile Auto</i></div>
+  <div class="logo">Hernandes <i>Mobile Auto Repair</i></div>
   <div class="navl"><a href="#work">Services</a><a href="#how">How It Works</a><a href="#fleet">Fleet</a><a href="#proof">Why Us</a><a href="#areas">Areas</a></div>
   <a class="call" href="tel:6198719186">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
     (619) 871-9186</a>
 </div></nav>
 
-<div class="hero"><div class="wrap heroin">
+<div class="hero plate"><div class="wrap heroin">
   <div>
     <div class="kick">San Diego &middot; Se habla espa&ntilde;ol</div>
-    <h1>Don't take the car<em>to the shop.</em></h1>
-    <p class="lede">The shop comes to your driveway. Diagnostics, brakes, electrical and engine
-    work &mdash; done at your home, your office or the roadside by Israel Hernandes, the owner and
-    the man holding the wrench.</p>
+    <h1>Mobile auto repair<em>comes to you.</em></h1>
+    <p class="lede">Diagnostics, brakes, electrical and engine work at your home, your office or the
+    roadside. You speak to Israel Hernandes &mdash; the owner and the lead technician &mdash; not a
+    call center.</p>
     <ul class="ticks">
       <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg> Most common repairs finished same day</li>
       <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg> BBB Accredited, A+ rated since October 2019</li>
-      <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg> You get told the price before anything starts</li>
+      <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg> Price agreed before any work starts</li>
     </ul>
   </div>
 
@@ -209,74 +215,87 @@ footer a:hover{color:var(--hi)}
 </div></div>
 
 <div class="strip"><div class="wrap stripin">
-  <span><b>A+</b> BBB accredited</span>
-  <span><b>2019</b> accredited since</span>
-  <span><b>24/7</b> emergency</span>
-  <span><b>Owner</b>-operated</span>
+  <span><b>A+</b> BBB accredited</span><span><b>2019</b> accredited since</span>
+  <span><b>24/7</b> emergency</span><span><b>Owner</b>-operated</span>
 </div></div>
 
-<section id="shots"><div class="wrap">
-  <div class="sh">
-    <div class="lab">The part that changes everything</div>
-    <h2>Your van is the storefront.</h2>
-    <p>There's no shop for anyone to walk into, no reception, no sign on a building. These four
-    photographs are the entire physical proof that you exist &mdash; and they'd do more for the brand
-    than any design decision on this page.</p>
+<section id="why"><div class="wrap">
+  <div class="sh"><div class="lab">Why Choose Hernandes</div>
+    <h2>The shop comes to your driveway.</h2>
+    <p>No drop-off, no waiting room, no rental car. The same work, done where the car already is.</p>
   </div>
-  <div class="shots">
-    <div class="shot">
-      <svg viewBox="0 0 24 24"><path d="M3 13l2-5h14l2 5v5h-3a2 2 0 11-4 0H8a2 2 0 11-4 0H3v-5zm2.5-3l-1 3h15l-1-3h-13z"/></svg>
-      <div class="n">The van</div><div class="d">Clean, signwritten, parked on a driveway</div>
+
+  <div class="row">
+    <div class="art plate"><span class="cap">Photo &mdash; your van on a driveway</span></div>
+    <div class="rowtxt">
+      <h3>Mobile service that comes to you</h3>
+      <p>The fully equipped mobile unit brings the shop to your home, your office or the roadside
+      anywhere in San Diego.</p>
+      <ul>
+        <li>No tow bill on a vehicle that won't start</li>
+        <li>No half a day lost sitting in a waiting room</li>
+        <li>You carry on with your day while it's fixed outside</li>
+      </ul>
     </div>
-    <div class="shot">
-      <svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-4 0-7 2-7 4v2h14v-2c0-2-3-4-7-4z"/></svg>
-      <div class="n">You</div><div class="d">In uniform, at a vehicle, face visible</div>
-    </div>
-    <div class="shot">
-      <svg viewBox="0 0 24 24"><path d="M20 7h-3V5a2 2 0 00-2-2H9a2 2 0 00-2 2v2H4v12h16V7zm-11-2h6v2H9V5z"/></svg>
-      <div class="n">The mobile unit</div><div class="d">Tools and diagnostic kit laid out</div>
-    </div>
-    <div class="shot">
-      <svg viewBox="0 0 24 24"><path d="M12 2l2.4 6.5 6.6.3-5.2 4.1 1.8 6.4L12 15.6 6.4 19.3l1.8-6.4L3 8.8l6.6-.3L12 2z"/></svg>
-      <div class="n">Work in progress</div><div class="d">A real job, in a real driveway</div>
+  </div>
+
+  <div class="row flip">
+    <div class="art plate"><span class="cap">Photo &mdash; you, in uniform, at a vehicle</span></div>
+    <div class="rowtxt">
+      <h3>Owner-operated, personally</h3>
+      <p>When you call, you speak directly with Israel Hernandes, the owner and lead technician.
+      Direct communication, direct accountability.</p>
+      <ul>
+        <li>The man who quotes it is the man who fixes it</li>
+        <li>Told what's wrong and what it costs before work starts</li>
+        <li>Spanish spoken throughout, start to finish</li>
+      </ul>
     </div>
   </div>
 </div></section>
 
 <section id="work" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
   <div class="sh"><div class="lab">What We Do</div>
-    <h2>Most of what a shop does, without the shop.</h2>
+    <h2>Expert repair services that come to you.</h2>
     <p>Each of these would be its own page on a live site, so somebody searching their exact problem
     lands on a page about it &mdash; not a paragraph.</p></div>
   <div class="svc">
-    <div class="sv"><div class="num">01</div><h3>Computer Diagnostics</h3>
+    <div class="sv">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg></div>
+      <h3>Computer Diagnostics</h3>
       <p>Professional scan tools to find what the warning light actually means, before anyone quotes you for parts.</p></div>
-    <div class="sv"><div class="num">02</div><h3>Brake Service</h3>
+    <div class="sv">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9 9 9 0 00-9-9zm0 4a5 5 0 015 5 5 5 0 01-5 5 5 5 0 01-5-5 5 5 0 015-5zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg></div>
+      <h3>Brake Service</h3>
       <p>Pads, discs and full brake systems, done at your home while you get on with your day.</p></div>
-    <div class="sv"><div class="num">03</div><h3>Electrical</h3>
+    <div class="sv">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2L4.5 13H11l-1 9 8.5-11H12l1-9z"/></svg></div>
+      <h3>Electrical Repair</h3>
       <p>Batteries, alternators, starters and wiring faults &mdash; the jobs that strand people.</p></div>
-    <div class="sv"><div class="num">04</div><h3>Engine Repairs</h3>
+    <div class="sv">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M20 8h-2.2A6 6 0 006 8H4a2 2 0 00-2 2v4a2 2 0 002 2h1l1 4h12l1-4h1a2 2 0 002-2v-4a2 2 0 00-2-2zm-8-3a4 4 0 013.9 3H8.1A4 4 0 0112 5z"/></svg></div>
+      <h3>Engine Repairs</h3>
       <p>Rough running, overheating and engine management problems diagnosed and repaired on site.</p></div>
   </div>
 </div></section>
 
 <section id="how"><div class="wrap">
-  <div class="sh"><div class="lab">How It Works</div><h2>No drop-off. No waiting room. No rental car.</h2></div>
+  <div class="sh"><div class="lab">How It Works</div><h2>Four steps, and you never leave the house.</h2></div>
   <div class="steps">
-    <div class="step"><div class="n">01</div><h3>Tell us the symptom</h3><p>Call, text, or use the form. Two minutes, and you can do it at ten at night.</p></div>
-    <div class="step"><div class="n">02</div><h3>We come to you</h3><p>Home, office or roadside anywhere in San Diego. The fully equipped mobile unit brings the shop.</p></div>
-    <div class="step"><div class="n">03</div><h3>Diagnose, then price</h3><p>You're told what's wrong and what it costs before any work starts. No surprises on the invoice.</p></div>
-    <div class="step"><div class="n">04</div><h3>Fixed, usually same day</h3><p>Most common repairs are finished on the first visit, and you never left the house.</p></div>
+    <div class="step"><div class="n">STEP 01</div><h3>Tell us the symptom</h3><p>Call, text or use the form. Two minutes, and you can do it at ten at night.</p></div>
+    <div class="step"><div class="n">STEP 02</div><h3>We come to you</h3><p>Home, office or roadside anywhere in San Diego. The mobile unit brings the shop.</p></div>
+    <div class="step"><div class="n">STEP 03</div><h3>Diagnose, then price</h3><p>You're told what's wrong and what it costs before any work starts.</p></div>
+    <div class="step"><div class="n">STEP 04</div><h3>Fixed, usually same day</h3><p>Most common repairs are finished on the first visit.</p></div>
   </div>
 </div></section>
 
 <section id="fleet" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
   <div class="sh"><div class="lab">Business &amp; Fleet</div>
     <h2>A vehicle off the road costs more than the repair.</h2>
-    <p>A section a live site would have and the current one doesn't &mdash; because a fleet manager and
-    a homeowner are not the same customer.</p></div>
+    <p>A section a live site would have and the current one doesn't &mdash; a fleet manager and a
+    homeowner aren't the same customer.</p></div>
   <div class="two">
-    <div class="box dark">
+    <div class="box dark plate">
       <div class="tag">Fleet &amp; commercial</div>
       <h3>Contractors, delivery, small fleets</h3>
       <ul>
@@ -301,10 +320,10 @@ footer a:hover{color:var(--hi)}
 </div></section>
 
 <section id="proof"><div class="wrap">
-  <div class="sh mid"><div class="lab">Why Us</div>
+  <div class="sh mid"><div class="lab">Trusted by San Diego Drivers</div>
     <h2>What to check before letting anyone near your car.</h2>
-    <p>The dashed tiles are deliberately empty. We'd only publish what you actually hold and can
-    evidence.</p></div>
+    <p>The dashed tiles are deliberately empty &mdash; we'd only publish what you actually hold and
+    can evidence.</p></div>
   <div class="proof">
     <div class="pf"><div class="big">A+</div><div class="cap">BBB accredited since October 2019</div></div>
     <div class="pf"><div class="big">24/7</div><div class="cap">Emergency service availability</div></div>
@@ -322,8 +341,8 @@ footer a:hover{color:var(--hi)}
   </div>
 </div></section>
 
-<div class="cta"><div class="wrap">
-  <h2>Tell us the symptom.<em>We'll come to you.</em></h2>
+<div class="cta plate"><div class="wrap">
+  <h2>Ready for repair?<em>We'll come to you.</em></h2>
   <p>Same day on most repairs, 24/7 for breakdowns, and a price agreed before any work starts.</p>
   <a class="call" href="tel:6198719186">Call (619) 871-9186</a>
 </div></div>
@@ -339,17 +358,17 @@ footer a:hover{color:var(--hi)}
   <div class="fn">
     <b>This is a concept demonstration built by AG1 Consulting for Israel Hernandes on 27 August 2026.
     It is not a live website and is not affiliated with or published by Hernandes Mobile Auto Repair.</b>
-    The four photo slots are <b>empty placeholders indicating where your own photographs would go</b> —
-    no image on this page depicts your vehicle, your work or your premises. The ASE and Google rating
-    tiles are <b>deliberately empty: no ASE certification and no rating is claimed</b>, because neither
-    is published on your current site, and any you hold would be added only once evidenced. The BBB A+
-    rating and its 2019 accreditation date, same-day service, 24/7 availability, owner-operated status
-    and Spanish-language service are <b>your own published claims and have not been independently
-    verified</b> with the BBB or any other body. <b>The fleet and commercial section describes services
-    such a page could set out and is not a statement that these are currently offered in this form.</b>
-    Service areas beyond San Diego are illustrative. No price, timescale, warranty or guarantee is
-    offered anywhere on this page. The enquiry form is a front-end demonstration: it sends nothing,
-    stores nothing and contacts nobody.
+    <b>Every image area on this page is an abstract placeholder, not a photograph — no image here
+    depicts your vehicle, your work, your premises or any person.</b> The two captioned panels mark
+    where your own photographs would go. The ASE and Google rating tiles are <b>deliberately empty: no
+    ASE certification and no rating is claimed</b>, because neither is published on your current site,
+    and any you hold would be added only once evidenced. The BBB A+ rating and its 2019 accreditation
+    date, same-day service, 24/7 availability, owner-operated status and Spanish-language service are
+    <b>your own published claims and have not been independently verified</b> with the BBB or any other
+    body. <b>The fleet and commercial section describes services such a page could set out and is not a
+    statement that these are currently offered in this form.</b> Service areas beyond San Diego are
+    illustrative. No price, timescale, warranty or guarantee is offered anywhere. The enquiry form is a
+    front-end demonstration: it sends nothing, stores nothing and contacts nobody.
   </div>
 </div></footer>
 
@@ -371,7 +390,7 @@ function q(e){
     o.innerHTML='<b>Straight to the fleet list.</b>Company and fleet vehicles get seen together, at your yard, outside operating hours where we can — because a van off the road costs you more than the repair does.'+area;}
   else if(s>=3){o.className='out show o-hi';
     o.innerHTML='<b>We’d come out today or tomorrow.</b>You get told what’s wrong and what it costs before any work starts, and most jobs like this are finished on the first visit.'+area;}
-  else{o.className='out show o-lo';
+  else{o.className='out show o-md';
     o.innerHTML='<b>Happy to give you a price.</b>Getting quotes is sensible — it just goes in a different queue to somebody sitting on a hard shoulder. <b style="display:inline">That’s the point of asking:</b> a breakdown and a price-check stop arriving looking identical.'+area;}
   o.scrollIntoView({behavior:'smooth',block:'nearest'});
   return false;
